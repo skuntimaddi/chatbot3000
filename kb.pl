@@ -1,14 +1,25 @@
+%!eligibility list
+%!@param: CGPA
+%! Prints corresponding string.
 eligible(10,['Your score meets the required criteria. Fill in the online form and pay the exam fees.']).
 eligible(9,['Your score meets the required criteria. Fill in the online form and pay the exam fees.']).
 eligible(8,['Your score meets the required criteria. Fill in the online form and pay the exam fees.']).
 eligible(7,['Your score meets the required criteria. Fill in the online form and pay the exam fees.']).
 eligible(6,['Sorry your score doesnt meet the required criteria']).
 eligible(5,['Sorry your score doesnt meet the required criteria']).
+eligible(4,['Sorry your score doesnt meet the required criteria']).
+eligible(3,['Sorry your score doesnt meet the required criteria']).
+eligible(2,['Sorry your score doesnt meet the required criteria']).
+eligible(1,['Sorry your score doesnt meet the required criteria']).
+eligible(0,['Sorry your score doesnt meet the required criteria']).
 
+%!prints, when called, deadline to submit application.
 deadline([15,'Jan',2020]).
 
+%!prints, when called, examination date.
 examdate([15,'Feb',2020]).
 
+%!prints, when called, examination centers.
 exam-centers(['AMC Engineering College, 18th Kilometer, Bannerghatta Main Road, Bengaluru, Karnataka - 560083',
               'City Engineering College, Doddakalasandra, Bengaluru, Karnataka,560062',
               'New Prince Shri Bhavani College Of Engineering & Technology,  Vengaivasal Main Road, Valli Nagar, Gowrivakkam, Sembakkam, Chennai, Tamil Nadu 600073',
@@ -22,8 +33,10 @@ exam-centers(['AMC Engineering College, 18th Kilometer, Bannerghatta Main Road, 
               'WILP Division (Right side of Library building), BITS Pilani - Pilani Campus, Vidya Vihar, Pilani 333031, Rajasthan',
               'SMT. KASHIBAI NAVALE COLLEGE OF ENGINEERING, Survey. No. 44-1, Vadgaon Budruk, Off. Sinhgad Road,Pune,Maharashtra-411041']).
 
+%!prints, when called, examination syllabus
 syllabus(['NCERT - 10th,11th,12th','CBSC - 10th,11th,12th','ICSE - 10th,11th,12th','NIOS - 10th,11th,12th']).
 
+%!prints, when called, examination instructions
 instruction(['We have collated the following good practices that would be useful for you to consider for a smooth and interruption free experience of the online proctored examinations:',
              'Login to the system on time for the examination. This ensures timely identity verification, system readiness and timely start of the online proctored examination.',
              'For any support concerning the examination platform, you may reach out to the online proctor through the system’s chat feature. This is your first line of support when you are still logged into the system.',
@@ -34,7 +47,8 @@ instruction(['We have collated the following good practices that would be useful
              'For questions where it is simple to directly input a large part of the answer into the system, you may Input that larger part of the answer using your laptop/desktop key board. A4 sheet should be used to write and uploadthose parts of the answer which might be tough to enter using a laptop/desktop key board because they may involve drawing a diagram or writing some complex equations etc. that is hard to input using a keyboard.',
              'Only for questions where answers primarily / mostly involve writing of complex equations and diagrams or any other content that is difficult to type in using the laptop/desktop’s keyboard, you may choose to entirely write and upload your answer using the A4 sheets.',
              'The above guidelines will help you avoid undue delays and interruptions during the examination on account of uploads.']).
-			 
+
+%!prints, when called, scholarship information			 
 schlorship(['Under BITS own merit award scheme Top 1% Students get 100% of total tuition fee as amount of scholarship' ,
             'Under BITS own merit award scheme Top 2% Students get 40% of total tuition fee as amount of scholarship' ,
             'Under BITS own merit-cum-need awards scheme 3% Students get 80% of total tuition fee as amount of scholarship' ,
@@ -42,7 +56,22 @@ schlorship(['Under BITS own merit award scheme Top 1% Students get 100% of total
             'Under BITS own merit-cum-need awards scheme 12% Students get 25% of total tuition fee as amount of scholarship' ,
             'Under BITS own merit-cum-need awards scheme 6% Students get 15% of total tuition fee as amount of scholarship',
             'For any further queries please send mail to admnoc@pilani.bits-pilani.ac.in']).
-			 
+
+%!prints, when called, fee structure		
+fee(['Admission Fees : 43800',
+     'Semester 1 fee : 199000',
+     'Semester 2 fee : 199000',
+	 'Students Union fee : 450',
+	 'Students Aid Fund : 225',
+     'Hostel, Mess & Electricity fee : 54300',
+	 'Other Advances : 24000' ,
+     'Institute Caution Deposit : 3000']).
+
+payment(['online: pay from bits pilani portal www.bitsadmission.com']).
+	 
+%!bitsat score
+%!@param: bitsat hall ticket number
+%! Prints ranking of the candidate corresponding to the hallticket
 bitsat_score(bitsat2019b12345,1).
 bitsat_score(bitsat2019b12346,9).
 bitsat_score(bitsat2019b12347,6).
@@ -104,12 +133,18 @@ bitsat_score(bitsat2019b12402,48).
 bitsat_score(bitsat2019b12403,59).
 bitsat_score(bitsat2019b12404,60).		 
 
+%!cutoff
+%!@param: branch code
+%! Prints cutoff ranking for each branch code.
 cutoff(cs,10).
 cutoff(et,20).
 cutoff(ee,30).
 cutoff(mech,45).
 cutoff(civil,60).
 
+%!alloted 
+%!@param: bitsat rank
+%! Prints alloted branch
 alloted(0,['Computer Science']).
 alloted(1,['Computer Science']).
 alloted(2,['Electronics and Telecommunication']).
@@ -118,18 +153,4 @@ alloted(4,['Mechanical']).
 alloted(5,['Mechanical']).
 alloted(6,['Civil']).
 
-fee(['Admission Fees : 43800',
-     'Semester 1 fee : 199000',
-     'Semester 2 fee : 199000',
-	 'Students Union fee : 450',
-	 'Students Aid Fund : 225',
-     'Hostel, Mess & Electricity fee : 54300',
-	 'Other Advances : 24000' ,
-     'Institute Caution Deposit : 3000']).
-	
-payment(['online: pay from bits pilani portal www.bitsadmission.com']).
-
 verifypaid(1,1).
-
-
-
